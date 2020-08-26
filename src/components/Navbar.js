@@ -4,12 +4,12 @@ import {Link, NavLink} from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="navbarComponent">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+      <nav className ="navbar navbar-expand-lg navbar-light bg-light">
+        <a className ="navbar-brand" href="#">
           Navbar
         </a>
         <button
-          class="navbar-toggler"
+          className ="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavAltMarkup"
@@ -17,20 +17,20 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <Link class="nav-item nav-link active" to="/">
-              Home <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <Link className="nav-item nav-link active" to="/">
+              Home <span className="sr-only">(current)</span>
             </Link>
-            <Link class="nav-item nav-link" to="/about">
+            <Link className="nav-item nav-link" to="/about">
               About
             </Link>
-            <Link class="nav-item nav-link" to="/form">
+            <Link className="nav-item nav-link" to="/form">
               Form
             </Link>
-            <Link class="nav-item nav-link" to="/contact">
+            <Link className="nav-item nav-link" to="/contact">
               Contact
             </Link>
           </div>

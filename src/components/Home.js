@@ -11,6 +11,10 @@ class Home extends Component {
         ],
     }
 
+    addStudent = newStudent => {
+        this.setState({students: [...this.state.students, newStudent]})
+    }
+
     render() {
         return(
             <div className="home">
