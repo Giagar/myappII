@@ -6,7 +6,8 @@ class Form extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addStudent(this.state);
-        //console.log("submit works")
+        document.querySelector("#name").value = "";
+        document.querySelector("#country").value = "";
     }
     
     handleChange = (e) => {
