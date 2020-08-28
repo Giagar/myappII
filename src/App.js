@@ -24,6 +24,11 @@ class App extends Component {
     student.id = Math.random();
     this.setState({ students: [...this.state.students, student] });
   }
+
+  removeStudent = studentId => {
+    const newState = this.state.students.filter(student => student.id !== studentId);
+    this.setState({ students: newState });
+  }
   
   render() {
     return (
@@ -31,7 +36,7 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Route exact path="/">
-            <Home students={this.state.students}/>
+            <Home students={this.state.students} removeStudent={this.removeStudent}/>
           </Route>
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />

@@ -13,7 +13,7 @@ class Home extends Component {
         return(
             <div className="home">
                 <h1>Home</h1>
-                <StudentsUI students={this.props.students} />
+                <StudentsUI students={this.props.students} removeStudent={this.props.removeStudent} />
             </div>
         )
     }
