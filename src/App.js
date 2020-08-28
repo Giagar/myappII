@@ -19,6 +19,11 @@ class App extends Component {
         {name: "Student4", country: "Norway", id: 4},    
     ],
 }
+
+  addStudent = student => {
+    student.id = Math.random();
+    this.setState({ students: [...this.state.students, student] });
+  }
   
   render() {
     return (
@@ -31,7 +36,9 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/pagenotworking" component={PageNotWorking} />
-          <Route path="/form" component={Form} />
+          <Route path="/form">
+            <Form addStudent={this.addStudent} />
+          </Route>
         </div>
       </BrowserRouter>
     );

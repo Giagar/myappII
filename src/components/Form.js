@@ -5,7 +5,8 @@ class Form extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log("submit works")
+        this.props.addStudent(this.state);
+        //console.log("submit works")
     }
     
     handleChange = (e) => {
