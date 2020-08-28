@@ -10,13 +10,24 @@ import PageNotWorking from "./components/PageNotWorking";
 import Form from "./components/Form";
 
 class App extends Component {
+
+  state = {
+    students: [
+        {name: "Student1", country: "Italy", id: 1},
+        {name: "Student2", country: "France", id: 2},
+        {name: "Student3", country: "Spain", id: 3},
+        {name: "Student4", country: "Norway", id: 4},    
+    ],
+}
   
   render() {
     return (
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/">
+            <Home students={this.state.students}/>
+          </Route>
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/pagenotworking" component={PageNotWorking} />
